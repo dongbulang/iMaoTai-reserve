@@ -18,7 +18,7 @@ def encrypt_aes_ebc(plain_str, key):
 def decrypt_aes_ebc(ciphertext, key):
     ciphertext = base64.b64decode(ciphertext)
     cipher = AES.new(key, AES.MODE_ECB)
-    plain_str = unpad(cipher.decrypt(ciphertext), AES.block_size)
+    plain_str = unpad(cipher.decrypt(ciphertext), AES.block_size, style='pkcs7')
     return plain_str.decode()
 
 
