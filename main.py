@@ -39,6 +39,7 @@ for section in configs.sections():
     if (configs.get(section, 'enddate') != 9) and (TODAY > configs.get(section, 'enddate')):
         continue
     mobile = privateCrypt.decrypt_aes_ecb(section, aes_key)
+    print(section)
     province = configs.get(section, 'province')
     city = configs.get(section, 'city')
     token = configs.get(section, 'token')
