@@ -1,4 +1,5 @@
 import os
+from venv import logger
 
 '''
 *********** 商品配置 ***********
@@ -25,8 +26,8 @@ PUSH_TOKEN = os.environ.get("PUSHPLUS_KEY")
 *********** 地图配置 ***********
 获取地点信息,这里用的高德api,需要自己去高德开发者平台申请自己的key
 '''
-AMAP_KEY = os.environ.get("GAODE_KEY")
-
+# AMAP_KEY = os.environ.get("GAODE_KEY")
+AMAP_KEY = '25b64f3655ff389aabf7e7b2543124bc'
 
 '''
 *********** 个人账户认证配置 ***********
@@ -46,7 +47,7 @@ key用了SHA-256转化,所以这里可以配置任意字符串,不用遵守AES�
 ps:本来是写了判断是否配置密钥，可以自由选择明文保存的方式。但是还是为了安全性，限制了必须使用AES加密。哪怕是明文密钥。
 '''
 PRIVATE_AES_KEY = os.environ.get("PRIVATE_AES_KEY")
-
+# PRIVATE_AES_KEY = '666666'
 
 '''
 *********** 预约规则配置 ************
