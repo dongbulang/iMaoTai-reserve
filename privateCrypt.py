@@ -11,6 +11,7 @@ def get_aes_key():
     获取config中你的AES私钥
     :return:
     """
+    print(config.PRIVATE_AES_KEY )
     private_key = config.PRIVATE_AES_KEY  # 你的私钥
     if private_key is None:
         logging.error("!!!!请配置config.py中PRIVATE_AES_KEY(AES的私钥)")
